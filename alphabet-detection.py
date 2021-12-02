@@ -13,9 +13,20 @@ while True:
 
     if(len(handLandmarks) != 0):
         # Test
-        # Letter - A
-        if((handLandmarks[4][3] == "Right" and handLandmarks[4][1] > handLandmarks[3][1]) or
-            (handLandmarks[4][3] == "Left" and handLandmarks[4][1] < handLandmarks[3][1])):
+        # Letter - A (left)
+        if((handLandmarks[4][3] == "Left" and handLandmarks[4][1] < handLandmarks[3][1]) &
+            (handLandmarks[8][2] > handLandmarks[6][2]) & # Index finger
+            (handLandmarks[12][2] > handLandmarks[10][2]) & # Middle finger
+            (handLandmarks[16][2] > handLandmarks[14][2]) & # Ring finger
+            (handLandmarks[20][2] > handLandmarks[18][2])):
+            letter = "A"
+        # Letter - A (right)
+        # TODO: A doesn't work on right hand
+        elif((handLandmarks[4][3] == "Right" and handLandmarks[4][1] > handLandmarks[3][1]) &
+            (handLandmarks[8][2] > handLandmarks[6][2]) & # Index finger
+            (handLandmarks[12][2] > handLandmarks[10][2]) & # Middle finger
+            (handLandmarks[16][2] > handLandmarks[14][2]) & # Ring finger
+            (handLandmarks[20][2] > handLandmarks[18][2])):
             letter = "A"
         
         # Letter - B
