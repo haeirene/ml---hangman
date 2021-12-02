@@ -29,6 +29,18 @@ while True:
             letter = "A"
         
         # Letter - B
+        if((handLandmarks[4][3] == "Left" and handLandmarks[4][1] < handLandmarks[3][1]) &
+            (handLandmarks[8][2] < handLandmarks[6][2]) & # Index finger
+            (handLandmarks[12][2] < handLandmarks[10][2]) & # Middle finger
+            (handLandmarks[16][2] < handLandmarks[14][2]) & # Ring finger
+            (handLandmarks[20][2] < handLandmarks[18][2])):
+            letter = "B"
+        elif((handLandmarks[4][3] == "Right" and handLandmarks[4][1] < handLandmarks[3][1]) &
+            (handLandmarks[8][2] < handLandmarks[6][2]) & # Index finger
+            (handLandmarks[12][2] < handLandmarks[10][2]) & # Middle finger
+            (handLandmarks[16][2] < handLandmarks[14][2]) & # Ring finger
+            (handLandmarks[20][2] < handLandmarks[18][2])):
+            letter = "B"
 
         # Letter - C
 
@@ -80,6 +92,11 @@ while True:
         # Letter - T
 
         # Letter - U
+        if ((handLandmarks[8][2] < handLandmarks[6][2]) & # Index finger
+            (handLandmarks[12][2] < handLandmarks[10][2]) & # Middle finger
+            (handLandmarks[16][2] > handLandmarks[14][2]) & # Ring finger
+            (handLandmarks[20][2] > handLandmarks[18][2])): # Little finger
+            letter = "U"
         
         # Letter - V
         if ((handLandmarks[8][2] < handLandmarks[6][2]) & # Index finger
