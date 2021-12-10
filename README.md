@@ -20,6 +20,11 @@ Anaconda is used to use the Jupyter notebooks. It's not necessary to download bu
 Download Anaconda: [Download here](https://www.anaconda.com/)
 
 
+## Libraries
+
+In shell/terminal: `pip install mediapipe`
+
+
 # How to use this repo
 In shell: `python alphabet-detection.py`
 Want to test the simplified hangman version? Then run in shell/terminal: `Jupyter notebook`
