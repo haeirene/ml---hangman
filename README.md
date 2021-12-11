@@ -27,7 +27,7 @@ In shell/terminal: `pip install mediapipe`
 
 # How to use this repo
 In shell: `python alphabet-detection.py`
-Want to test the simplified hangman version? Then run in shell/terminal: `Jupyter notebook`
+Want to test the simplified hangman version? Then run in shell/terminal: `jupyter notebook`
 
 In shell/terminal, you will see a lot of lines and a new webpage opens. Wait a minute to see the structure of your folders (based on where the path in your shell/terminal).
 
