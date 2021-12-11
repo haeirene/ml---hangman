@@ -1,6 +1,7 @@
 import mediapipe as mp
 import cv2
 
+
 #Initializations: static code
 mpHands = mp.solutions.hands
 mpDraw = mp.solutions.drawing_utils

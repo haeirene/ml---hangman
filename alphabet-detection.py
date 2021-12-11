@@ -1,10 +1,17 @@
 from handDetector import HandDetector
+from game import Game
 import cv2
 import math
 import numpy as np
 
 handDetector = HandDetector(min_detection_confidence=0.7)
 webcamFeed = cv2.VideoCapture(0)
+
+game = Game(0, [], [], "ALLIGATOR")
+# print(game.word_to_be_guessed)
+
+letter = ""
+prevLetter = ""
 
 while True:
     status, image = webcamFeed.read()
@@ -122,5 +129,18 @@ while True:
         # Letter - Z
 
     cv2.putText(image, letter, (45, 375), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 0, 0), 25)
+
+    # Pre GUI - print output
+
+    if prevLetter != letter:
+        prevLetter = letter
+
+        print("---------------------------------")
+        print("\n")
+        game.guess(letter)
+        print(game.word_player_guessed)
+        print(game.mistakes)
+        print("\n")
+
     cv2.imshow("Volume", image)
     cv2.waitKey(1)
